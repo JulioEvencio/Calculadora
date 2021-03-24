@@ -11,8 +11,9 @@ package principal;
  */
 public class Calculadora extends javax.swing.JFrame {
     
-    private double x;
-    private double y;
+    private Double x;
+    private Double y;
+    private char operacao;
 
     /**
      * Creates new form Calculadora
@@ -31,7 +32,7 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }
     
-    private void calcular(char operacao) {
+    private void calcular() {
         String resposta = "ERROR";
         switch (operacao) {
             case '+':
@@ -164,6 +165,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         botaoIgual.setText("=");
+        botaoIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoIgualActionPerformed(evt);
+            }
+        });
 
         botaoAdicao.setText("+");
 
@@ -319,6 +325,11 @@ public class Calculadora extends javax.swing.JFrame {
     private void resetarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetarActionPerformed
         display.setText("0");
     }//GEN-LAST:event_resetarActionPerformed
+
+    private void botaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIgualActionPerformed
+        y = Double.parseDouble(display.getText());
+        calcular();
+    }//GEN-LAST:event_botaoIgualActionPerformed
 
     /**
      * @param args the command line arguments
