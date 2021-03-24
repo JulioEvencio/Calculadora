@@ -24,7 +24,11 @@ public class Calculadora extends javax.swing.JFrame {
     
     private void alterarDisplay(String numero) {
         if((display.getText()).length() < 13) {
-            if((display.getText()).equals("0")) {
+            if((display.getText()).equals("0")
+                    || display.getText().contains("+")
+                    || display.getText().contains("-")
+                    || display.getText().contains("*")
+                    || display.getText().contains("/")) {
                 display.setText(numero);
             } else {
                 display.setText(display.getText() + numero);
@@ -358,25 +362,25 @@ public class Calculadora extends javax.swing.JFrame {
     private void botaoAdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdicaoActionPerformed
         x = Double.parseDouble(display.getText());
         operacao = '+';
-        display.setText("0");
+        display.setText(display.getText() + "+");
     }//GEN-LAST:event_botaoAdicaoActionPerformed
 
     private void botaoSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSubtracaoActionPerformed
         x = Double.parseDouble(display.getText());
         operacao = '-';
-        display.setText("0");
+        display.setText(display.getText() + "-");
     }//GEN-LAST:event_botaoSubtracaoActionPerformed
 
     private void botaoMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMultiplicacaoActionPerformed
         x = Double.parseDouble(display.getText());
         operacao = '*';
-        display.setText("0");
+        display.setText(display.getText() + "*");
     }//GEN-LAST:event_botaoMultiplicacaoActionPerformed
 
     private void botaoDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDivisaoActionPerformed
         x = Double.parseDouble(display.getText());
         operacao = '/';
-        display.setText("0");
+        display.setText(display.getText() + "/");
     }//GEN-LAST:event_botaoDivisaoActionPerformed
 
     /**
