@@ -349,16 +349,14 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void resetarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetarActionPerformed
         display.setText("0");
-        x = 0.0;
-        y  = 0.0;
+        operacao = 'N';
     }//GEN-LAST:event_resetarActionPerformed
 
     private void botaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIgualActionPerformed
         if(operacao != 'N') {
             y = Double.parseDouble(display.getText());
             calcular();
-            x = 0.0;
-            y  = 0.0;
+            operacao = 'N';
         }
     }//GEN-LAST:event_botaoIgualActionPerformed
 
