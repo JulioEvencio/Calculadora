@@ -46,7 +46,7 @@ public class Calculadora extends javax.swing.JFrame {
         botaoOito = new javax.swing.JButton();
         botaoNove = new javax.swing.JButton();
         botaoZero = new javax.swing.JButton();
-        botaoVirgula = new javax.swing.JButton();
+        botaoPonto = new javax.swing.JButton();
         botaoIgual = new javax.swing.JButton();
         botaoAdicao = new javax.swing.JButton();
         botaoSubtracao = new javax.swing.JButton();
@@ -131,7 +131,12 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
-        botaoVirgula.setText(".");
+        botaoPonto.setText(".");
+        botaoPonto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoPontoActionPerformed(evt);
+            }
+        });
 
         botaoIgual.setText("=");
 
@@ -176,7 +181,7 @@ public class Calculadora extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(botaoZero)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(botaoVirgula))
+                                        .addComponent(botaoPonto))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(botaoSete)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -219,7 +224,7 @@ public class Calculadora extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoZero)
-                    .addComponent(botaoVirgula)
+                    .addComponent(botaoPonto)
                     .addComponent(botaoIgual)
                     .addComponent(botaoDivisao))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -269,6 +274,12 @@ public class Calculadora extends javax.swing.JFrame {
         alterarDisplay(botaoZero.getText());
     }//GEN-LAST:event_botaoZeroActionPerformed
 
+    private void botaoPontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPontoActionPerformed
+        if(!(display.getText()).contains(".")) {
+            display.setText(display.getText() + botaoPonto.getText());
+        }
+    }//GEN-LAST:event_botaoPontoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -313,13 +324,13 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton botaoMultiplicacao;
     private javax.swing.JButton botaoNove;
     private javax.swing.JButton botaoOito;
+    private javax.swing.JButton botaoPonto;
     private javax.swing.JButton botaoQuatro;
     private javax.swing.JButton botaoSeis;
     private javax.swing.JButton botaoSete;
     private javax.swing.JButton botaoSubtracao;
     private javax.swing.JButton botaoTres;
     private javax.swing.JButton botaoUm;
-    private javax.swing.JButton botaoVirgula;
     private javax.swing.JButton botaoZero;
     private javax.swing.JLabel display;
     // End of variables declaration//GEN-END:variables
