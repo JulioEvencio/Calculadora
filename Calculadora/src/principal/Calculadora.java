@@ -19,10 +19,12 @@ public class Calculadora extends javax.swing.JFrame {
     }
     
     private void alterarDisplay(String numero) {
-        if((display.getText()).equals("0")) {
-            display.setText(numero);
-        } else {
-            display.setText(display.getText() + numero);
+        if((display.getText()).length() < 13) {
+            if((display.getText()).equals("0")) {
+                display.setText(numero);
+            } else {
+                display.setText(display.getText() + numero);
+            }
         }
     }
 
