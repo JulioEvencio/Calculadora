@@ -17,6 +17,10 @@ public class Calculadora extends javax.swing.JFrame {
     public Calculadora() {
         initComponents();
     }
+    
+    private void alterarDisplay(String numero) {
+        display.setText(numero);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,63 +31,63 @@ public class Calculadora extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        display = new javax.swing.JLabel();
+        botaoUm = new javax.swing.JButton();
+        botaoDois = new javax.swing.JButton();
+        botaoTres = new javax.swing.JButton();
+        botaoQuatro = new javax.swing.JButton();
+        botaoCinco = new javax.swing.JButton();
+        botaoSeis = new javax.swing.JButton();
+        botaoSete = new javax.swing.JButton();
+        botaoOito = new javax.swing.JButton();
+        botaoNove = new javax.swing.JButton();
+        botaoZero = new javax.swing.JButton();
+        botaoVirgula = new javax.swing.JButton();
+        botaoIgual = new javax.swing.JButton();
+        botaoAdicao = new javax.swing.JButton();
+        botaoSubtracao = new javax.swing.JButton();
+        botaoMultiplicacao = new javax.swing.JButton();
+        botaoDivisao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("0");
+        display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        display.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        display.setText("0");
 
-        jButton1.setText("1");
+        botaoUm.setText("1");
 
-        jButton2.setText("2");
+        botaoDois.setText("2");
 
-        jButton3.setText("3");
+        botaoTres.setText("3");
 
-        jButton4.setText("4");
+        botaoQuatro.setText("4");
 
-        jButton5.setText("5");
+        botaoCinco.setText("5");
 
-        jButton6.setText("6");
+        botaoSeis.setText("6");
 
-        jButton7.setText("7");
+        botaoSete.setText("7");
 
-        jButton8.setText("8");
+        botaoOito.setText("8");
 
-        jButton9.setText("9");
+        botaoNove.setText("9");
 
-        jButton10.setText("0");
+        botaoZero.setText("0");
 
-        jButton11.setText(".");
+        botaoVirgula.setText(".");
 
-        jButton12.setText("=");
+        botaoIgual.setText("=");
 
-        jButton13.setText("+");
+        botaoAdicao.setText("+");
 
-        jButton14.setText("-");
+        botaoSubtracao.setText("-");
 
-        jButton15.setText("*");
+        botaoMultiplicacao.setText("*");
 
-        jButton16.setText("/");
+        botaoDivisao.setText("/");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,77 +97,77 @@ public class Calculadora extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(botaoUm)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)
+                                .addComponent(botaoDois)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
+                                .addComponent(botaoTres)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton13))
+                                .addComponent(botaoAdicao))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton4)
+                                .addComponent(botaoQuatro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5)
+                                .addComponent(botaoCinco)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton6)
+                                .addComponent(botaoSeis)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(botaoSubtracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton10)
+                                        .addComponent(botaoZero)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton11))
+                                        .addComponent(botaoVirgula))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton7)
+                                        .addComponent(botaoSete)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton8)))
+                                        .addComponent(botaoOito)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton12)
+                                        .addComponent(botaoIgual)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(botaoDivisao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton9)
+                                        .addComponent(botaoNove)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(botaoMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(0, 8, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(display)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton13))
+                    .addComponent(botaoUm)
+                    .addComponent(botaoDois)
+                    .addComponent(botaoTres)
+                    .addComponent(botaoAdicao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
-                    .addComponent(jButton14))
+                    .addComponent(botaoQuatro)
+                    .addComponent(botaoCinco)
+                    .addComponent(botaoSeis)
+                    .addComponent(botaoSubtracao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8)
-                    .addComponent(jButton9)
-                    .addComponent(jButton15))
+                    .addComponent(botaoSete)
+                    .addComponent(botaoOito)
+                    .addComponent(botaoNove)
+                    .addComponent(botaoMultiplicacao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10)
-                    .addComponent(jButton11)
-                    .addComponent(jButton12)
-                    .addComponent(jButton16))
+                    .addComponent(botaoZero)
+                    .addComponent(botaoVirgula)
+                    .addComponent(botaoIgual)
+                    .addComponent(botaoDivisao))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -207,22 +211,22 @@ public class Calculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton botaoAdicao;
+    private javax.swing.JButton botaoCinco;
+    private javax.swing.JButton botaoDivisao;
+    private javax.swing.JButton botaoDois;
+    private javax.swing.JButton botaoIgual;
+    private javax.swing.JButton botaoMultiplicacao;
+    private javax.swing.JButton botaoNove;
+    private javax.swing.JButton botaoOito;
+    private javax.swing.JButton botaoQuatro;
+    private javax.swing.JButton botaoSeis;
+    private javax.swing.JButton botaoSete;
+    private javax.swing.JButton botaoSubtracao;
+    private javax.swing.JButton botaoTres;
+    private javax.swing.JButton botaoUm;
+    private javax.swing.JButton botaoVirgula;
+    private javax.swing.JButton botaoZero;
+    private javax.swing.JLabel display;
     // End of variables declaration//GEN-END:variables
 }
