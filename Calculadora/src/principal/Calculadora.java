@@ -10,6 +10,9 @@ package principal;
  * @author Computer
  */
 public class Calculadora extends javax.swing.JFrame {
+    
+    private double x;
+    private double y;
 
     /**
      * Creates new form Calculadora
@@ -26,6 +29,25 @@ public class Calculadora extends javax.swing.JFrame {
                 display.setText(display.getText() + numero);
             }
         }
+    }
+    
+    private void calcular(char operacao) {
+        String resposta = "ERROR";
+        switch (operacao) {
+            case '+':
+                resposta = String.valueOf(x + y);
+                break;
+            case '-':
+                resposta = String.valueOf(x - y);
+                break;
+            case '*':
+                resposta = String.valueOf(x * y);
+                break;
+            case '/':
+                resposta = String.valueOf(x / y);
+                break;
+        }
+        display.setText(resposta);
     }
 
     /**
