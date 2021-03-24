@@ -54,6 +54,7 @@ public class Calculadora extends javax.swing.JFrame {
         botaoSubtracao = new javax.swing.JButton();
         botaoMultiplicacao = new javax.swing.JButton();
         botaoDivisao = new javax.swing.JButton();
+        resetar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
@@ -150,6 +151,13 @@ public class Calculadora extends javax.swing.JFrame {
 
         botaoDivisao.setText("/");
 
+        resetar.setText("Resetar");
+        resetar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,9 +165,6 @@ public class Calculadora extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -198,7 +203,12 @@ public class Calculadora extends javax.swing.JFrame {
                                         .addComponent(botaoNove)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(botaoMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 8, Short.MAX_VALUE))))
+                        .addGap(0, 8, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(resetar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,6 +239,8 @@ public class Calculadora extends javax.swing.JFrame {
                     .addComponent(botaoPonto)
                     .addComponent(botaoIgual)
                     .addComponent(botaoDivisao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(resetar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -281,6 +293,10 @@ public class Calculadora extends javax.swing.JFrame {
             display.setText(display.getText() + botaoPonto.getText());
         }
     }//GEN-LAST:event_botaoPontoActionPerformed
+
+    private void resetarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetarActionPerformed
+        display.setText("0");
+    }//GEN-LAST:event_resetarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,5 +351,6 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton botaoUm;
     private javax.swing.JButton botaoZero;
     private javax.swing.JLabel display;
+    private javax.swing.JButton resetar;
     // End of variables declaration//GEN-END:variables
 }
