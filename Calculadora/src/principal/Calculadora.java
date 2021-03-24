@@ -19,6 +19,7 @@ public class Calculadora extends javax.swing.JFrame {
      * Creates new form Calculadora
      */
     public Calculadora() {
+        operacao = 'N';
         initComponents();
     }
     
@@ -353,10 +354,12 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_resetarActionPerformed
 
     private void botaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIgualActionPerformed
-        y = Double.parseDouble(display.getText());
-        calcular();
-        x = 0.0;
-        y  = 0.0;
+        if(operacao != 'N') {
+            y = Double.parseDouble(display.getText());
+            calcular();
+            x = 0.0;
+            y  = 0.0;
+        }
     }//GEN-LAST:event_botaoIgualActionPerformed
 
     private void botaoAdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdicaoActionPerformed
