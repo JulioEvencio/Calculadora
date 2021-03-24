@@ -58,24 +58,74 @@ public class Calculadora extends javax.swing.JFrame {
         display.setText("0");
 
         botaoUm.setText("1");
+        botaoUm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoUmActionPerformed(evt);
+            }
+        });
 
         botaoDois.setText("2");
+        botaoDois.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoDoisActionPerformed(evt);
+            }
+        });
 
         botaoTres.setText("3");
+        botaoTres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoTresActionPerformed(evt);
+            }
+        });
 
         botaoQuatro.setText("4");
+        botaoQuatro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoQuatroActionPerformed(evt);
+            }
+        });
 
         botaoCinco.setText("5");
+        botaoCinco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCincoActionPerformed(evt);
+            }
+        });
 
         botaoSeis.setText("6");
+        botaoSeis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSeisActionPerformed(evt);
+            }
+        });
 
         botaoSete.setText("7");
+        botaoSete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSeteActionPerformed(evt);
+            }
+        });
 
         botaoOito.setText("8");
+        botaoOito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoOitoActionPerformed(evt);
+            }
+        });
 
         botaoNove.setText("9");
+        botaoNove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoNoveActionPerformed(evt);
+            }
+        });
 
         botaoZero.setText("0");
+        botaoZero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoZeroActionPerformed(evt);
+            }
+        });
 
         botaoVirgula.setText(".");
 
@@ -174,6 +224,46 @@ public class Calculadora extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUmActionPerformed
+        alterarDisplay(botaoUm.getText());
+    }//GEN-LAST:event_botaoUmActionPerformed
+
+    private void botaoDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDoisActionPerformed
+        alterarDisplay(botaoDois.getText());
+    }//GEN-LAST:event_botaoDoisActionPerformed
+
+    private void botaoTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoTresActionPerformed
+        alterarDisplay(botaoTres.getText());
+    }//GEN-LAST:event_botaoTresActionPerformed
+
+    private void botaoQuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoQuatroActionPerformed
+        alterarDisplay(botaoQuatro.getText());
+    }//GEN-LAST:event_botaoQuatroActionPerformed
+
+    private void botaoCincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCincoActionPerformed
+        alterarDisplay(botaoCinco.getText());
+    }//GEN-LAST:event_botaoCincoActionPerformed
+
+    private void botaoSeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSeisActionPerformed
+        alterarDisplay(botaoSeis.getText());
+    }//GEN-LAST:event_botaoSeisActionPerformed
+
+    private void botaoSeteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSeteActionPerformed
+        alterarDisplay(botaoSete.getText());
+    }//GEN-LAST:event_botaoSeteActionPerformed
+
+    private void botaoOitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoOitoActionPerformed
+        alterarDisplay(botaoOito.getText());
+    }//GEN-LAST:event_botaoOitoActionPerformed
+
+    private void botaoNoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoNoveActionPerformed
+        alterarDisplay(botaoNove.getText());
+    }//GEN-LAST:event_botaoNoveActionPerformed
+
+    private void botaoZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoZeroActionPerformed
+        alterarDisplay(botaoZero.getText());
+    }//GEN-LAST:event_botaoZeroActionPerformed
 
     /**
      * @param args the command line arguments
