@@ -186,6 +186,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         botaoMultiplicacao.setText("*");
+        botaoMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMultiplicacaoActionPerformed(evt);
+            }
+        });
 
         botaoDivisao.setText("/");
 
@@ -352,6 +357,12 @@ public class Calculadora extends javax.swing.JFrame {
         operacao = '-';
         display.setText("0");
     }//GEN-LAST:event_botaoSubtracaoActionPerformed
+
+    private void botaoMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMultiplicacaoActionPerformed
+        x = Double.parseDouble(display.getText());
+        operacao = '*';
+        display.setText("0");
+    }//GEN-LAST:event_botaoMultiplicacaoActionPerformed
 
     /**
      * @param args the command line arguments
