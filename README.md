@@ -1,5 +1,6 @@
 # Calculadora
 
+Uma simples calculadora em Java utilizando interface gráfica
 
 Imagem 1:
 
@@ -12,3 +13,5 @@ Imagem 2:
 Imagem 3:
 
 ![Zero](https://user-images.githubusercontent.com/65574850/112399940-f6be5400-8ce5-11eb-8b71-830cd05b0c8c.png)
+
+Em desenvolvimento...
